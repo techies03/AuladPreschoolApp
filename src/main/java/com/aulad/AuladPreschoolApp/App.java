@@ -22,7 +22,6 @@ public class App extends Application {
 		stage.centerOnScreen();
 		stage.getIcons().add(new Image(getClass().getResourceAsStream("/auladLogo.png")));
 		stage.show();
-		//
 	}
 
 	public static void main(String[] args) {
