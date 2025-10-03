@@ -1,0 +1,153 @@
+
+.label {
+-fx-font-size: 12px;
+-fx-font-weight: bold;
+-fx-text-fill: #333333;
+-fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+
+/* Primary (blue) */
+.button.btn-primary {
+    -fx-background-color: #3b82f6;   /* blue-500 */
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 14;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+}
+.button.btn-primary:hover  { -fx-background-color: #2563eb; } /* blue-600 */
+.button.btn-primary:pressed{ -fx-background-color: #1d4ed8; } /* blue-700 */
+
+/* Secondary (Bootstrap style gray) */
+.button.btn-secondary {
+    -fx-background-color: #6c757d;   /* Bootstrap gray */
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 14;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+}
+.button.btn-secondary:hover  { -fx-background-color: #5c636a; } /* darker gray */
+.button.btn-secondary:pressed{ -fx-background-color: #495057; } /* darkest gray */
+
+/* Success (green) */
+.button.btn-success {
+    -fx-background-color: #22c55e;   /* green-500 */
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 14;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+}
+.button.btn-success:hover  { -fx-background-color: #16a34a; } /* green-600 */
+.button.btn-success:pressed{ -fx-background-color: #15803d; } /* green-700 */
+
+/* Danger (red) */
+.button.btn-danger {
+    -fx-background-color: #ef4444;   /* red-500 */
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 14;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+}
+.button.btn-danger:hover  { -fx-background-color: #dc2626; } /* red-600 */
+.button.btn-danger:pressed{ -fx-background-color: #b91c1c; } /* red-700 */
+
+/* Warning (yellow/orange) */
+.button.btn-warning {
+    -fx-background-color: #f59e0b;   /* amber-500 */
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 14;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+}
+.button.btn-warning:hover  { -fx-background-color: #d97706; } /* amber-600 */
+.button.btn-warning:pressed{ -fx-background-color: #b45309; } /* amber-700 */
+
+.button.btn-indigo {
+    -fx-background-color: #6366f1;   /* indigo-500 */
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 14;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+}
+.button.btn-indigo:hover  { -fx-background-color: #4f46e5; } /* indigo-600 */
+.button.btn-indigo:pressed{ -fx-background-color: #4338ca; } /* indigo-700 */
+
+.button.btn-rose {
+    -fx-background-color: #f43f5e;   /* rose-500 */
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 14;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+}
+
+.button.btn-rose:hover  { -fx-background-color: #e11d48; } /* rose-600 */
+.button.btn-rose:pressed{ -fx-background-color: #be123c; } /* rose-700 */
+
+/* ====== Base TextField / TextArea ====== */
+.text-field.tw-input,
+.text-area.tw-input .content {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e5e7eb;              /* gray-200 */
+    -fx-text-fill: #111827;                 /* gray-900 */
+    -fx-border-width: 1;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-padding: 6 12;
+    -fx-font-size: 12px;
+    -fx-cursor: text;
+}
+
+/* Hover: subtle darker border */
+.text-field.tw-input:hover,
+.text-area.tw-input:hover .content {
+    -fx-border-color: #cbd5e1;              /* slate-300 */
+}
+
+/* Focus: Tailwind blue ring */
+.text-field.tw-input:focused,
+.text-area.tw-input:focused .content {
+    -fx-border-color: #3b82f6;              /* blue-500 */
+    -fx-effect: dropshadow(gaussian, rgba(59,130,246,0.25), 8, 0.3, 0, 0);
+}
+
+/* Prompt text (placeholder) */
+.text-field.tw-input:focused:empty,
+.text-area.tw-input .content:focused:empty {
+    -fx-prompt-text-fill: #9ca3af;          /* gray-400 */
+}
+
+/* Disabled state */
+.text-field.tw-input:disabled,
+.text-area.tw-input:disabled {
+    -fx-opacity: 0.6;
+    -fx-cursor: default;
+}
+
+/* ====== TextArea tweaks ====== */
+.text-area.tw-input {
+    -fx-background-color: transparent;
+}
+.text-area.tw-input .content {
+    -fx-background-insets: 0;
+}
+.text-area.tw-input .scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+}
+
+
+

@@ -1,0 +1,25 @@
+CREATE DATABASE IF NOT EXISTS aulad
+  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE aulad;
+
+CREATE TABLE IF NOT EXISTS student (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(200) NOT NULL,
+  birth_date DATE NOT NULL,
+  age TINYINT UNSIGNED NOT NULL CHECK (age BETWEEN 4 AND 6),
+  address TEXT NOT NULL,
+  allergy VARCHAR(255) NULL
+);
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(64) NOT NULL UNIQUE,
+  password_hash VARCHAR(100) NOT NULL,
+  role ENUM('OWNER','STAFF') NOT NULL DEFAULT 'OWNER',
+  is_active BOOLEAN NOT NULL DEFAULT TRUE
+);
+
+INSERT INTO users (username, password_hash, role, is_active)
+VALUES ('juliana', '$2a$12$03HvX14Tk3G1EDbfWE95SOTzo9dIilg7BQiNvi7spi0pNj.PVMmB6', 'OWNER', TRUE)
+ON DUPLICATE KEY UPDATE username = username;
