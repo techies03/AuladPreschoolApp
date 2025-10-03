@@ -104,13 +104,14 @@ public class MainController {
 	private void redirectToLogin(javafx.scene.Node node) {
 		try {
 			var loader = new javafx.fxml.FXMLLoader(getClass().getResource("/login-view.fxml"));
-			var scene = new javafx.scene.Scene(loader.load(), 360, 220);
+			Scene scene = new Scene(loader.load()); // don’t fix width/height
 			var stage = (javafx.stage.Stage) node.getScene().getWindow();
 			com.aulad.util.Session.clear();
 			stage.setScene(scene);
 			stage.setTitle("Aulad – Login");
 			stage.centerOnScreen();
 			stage.setResizable(false);
+			stage.sizeToScene(); // sizes the stage to the scene’s preferred size
 		} catch (Exception e) {
 			e.printStackTrace();
 			new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.ERROR, "Unable to open Login.")
